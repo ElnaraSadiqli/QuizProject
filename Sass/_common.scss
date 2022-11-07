@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+button{
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.815);
+    font-size: 20px;
+    padding: 5px;
+    width: 15%;
+    border-radius: 15px;
+transition-delay: 0.1s;
+
+}
+p{
+    margin-bottom: 0;
+}
+
+

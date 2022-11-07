@@ -1,0 +1,239 @@
+.b-style {
+    background-color: rgba(0, 0, 0, 0.808);
+
+
+}
+
+.trueAnswer {
+    background-color: green;
+}
+
+.wrongAnswer {
+    background-color: red;
+}
+
+
+// Quiz Page Container
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 900px;
+    height: 100vh;
+
+}
+
+// Start Button
+.start-btn {
+    padding: 20px;
+    border: 1.4px solid white;
+    background-color: yellowgreen;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 30%;
+
+    p {
+        color: whitesmoke;
+        font: 600 25px/20px 'Arial';
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        color: orange;
+        border-color: orange;
+        background-color: transparent;
+    }
+
+}
+
+// Quiz card
+#quiz-card {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    transform: scale(0.7);
+    background-color: #D3D3D3;
+    max-height: 80%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+    }
+
+    // Quiz Header
+    .quiz-header {
+        border-bottom: 2px solid black;
+        color: black;
+        padding-bottom: 10px;
+
+        // Quiz header left and right text
+        p {
+            font-size: 18px;
+            font-weight: 600;
+
+            & span {
+                color: green;
+            }
+        }
+
+        .timer {
+            #timer-quiz-header {
+                background-color: #F7D03B;
+                padding: 5px;
+            }
+        }
+    }
+
+    // Quiz Body
+    .quiz-body {
+        padding-top: 20px;
+
+        //  Question
+        #question {
+            border: 2px solid black;
+            border-radius: 10px;
+
+            //    Question Content
+            #question-content {
+                color: rgb(0, 0, 0);
+                font-size: 18px;
+                padding: 10px;
+                font-weight: 400;
+                text-align: justify;
+            }
+        }
+
+        // Answers
+        #answers {
+            padding: 25px;
+
+            // Answers variant
+            #option {
+                margin-top: 15px;
+
+                &:hover {
+                    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                }
+
+                img {
+                    width: 12px;
+                }
+            }
+
+            // User can not select other variants
+            .disabled {
+                pointer-events: none;
+            }
+
+        }
+
+    }
+
+    // Quiz Footer
+    .quiz-footer {
+
+        .submit-question {
+            font-size: 16px !important;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: yellowgreen;
+                border: 1px solid transparent;
+                color: white;
+
+            }
+
+            &.show {
+                opacity: 1;
+                pointer-events: auto;
+                transform: scale(1);
+            }
+        }
+
+        .exit-quiz {
+            margin-right: 10px;
+            opacity: 0;
+            pointer-events: none;
+
+            &:hover {
+                background-color: orange;
+                border: 1px solid transparent;
+                color: white;
+            }
+
+            &.show {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+}
+
+// Total Points
+.total-points {
+    width: 60%;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(128, 128, 128, 0.795);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .tt-p-img {
+        width: 270px;
+    }
+
+    .total-points-content {
+        border: 1px solid #F7D03B;
+        padding: 10px;
+
+        .tt-p-content {
+            font-weight: 400;
+            font-size: 1.8rem;
+            color: black;
+        }
+
+    }
+
+    .score {
+        font-size: 2rem;
+        color: black;
+        padding: 4px;
+        background-color: #F7D03B;
+        font-style: italic;
+        font-weight: 500;
+    }
+
+    .total-points-button {
+        text-align: center;
+        background-color: black;
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 5px;
+        margin: 20px 0px;
+
+        a {
+            font-size: 1.3rem;
+            color: #F7D03B;
+            line-height: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: white;
+                padding: 8px;
+            }
+        }
+    }
+}

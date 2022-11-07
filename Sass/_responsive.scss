@@ -1,0 +1,93 @@
+$miniPhone: 320px;
+$phone:640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+
+@media (min-width: #{$miniPhone}) and (max-width: #{$phone}) {
+    * {
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .start-btn {
+        margin-left: 43%;
+        padding: 10px;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    #quiz-card {
+        padding: 10px;
+
+        .quiz-header {
+
+            p {
+                font-size: 14px;
+            }
+        }
+        .quiz-body {
+            padding-top: 15px;
+
+            // Question content
+            #question {
+                padding: 5px;
+
+                #question-content {
+                    text-align: left;
+                    font-size: 14px;
+                }
+            }
+
+            // Answers button
+            #answers {
+                padding: 10px;
+                #option {
+                    margin-top: 10px;
+                    padding: 4px;
+                    span,
+                    b {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .quiz-footer {
+            .submit-question,
+            .exit-quiz {
+                padding: 3px;
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    //----------Total Points
+    .total-points {
+        width: 55%;
+     
+        .tt-p-img {
+            width: 115px;
+        }
+        .total-points-content {
+            padding: 5px;
+
+            .tt-p-content {
+                font-size: 18px;
+            }
+        }
+        .score {
+            font-size: 1.3rem;
+        }
+        .total-points-button {
+            padding: 3px;
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 850px) {}
